@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Un Juego para Ti!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="welcome-screen" class="screen">
+            <h1>¡Hola bella!</h1>
+            <p>¿Lista para un pequeño reto?</p>
+            <button id="start-btn">¡Sí, vamos!</button>
+        </div>
+
+        <div id="game-screen" class="screen hidden">
+            <h2>Ordena la frase</h2>
+            <div id="word-bank" class="word-bank">
+                <!-- Words will be added here by JavaScript -->
+            </div>
+            <div id="sentence-container" class="sentence-container">
+                <!-- User's sentence will be built here -->
+            </div>
+            <div id="result" class="hidden">
+                <p id="result-text"></p>
+                <div id="question" class="hidden">
+                    <p>¿Quieres ir al concierto conmigo?</p>
+                    <div class="buttons">
+                        <button id="yes-btn">¡Sí!</button>
+                        <button id="no-btn">No</button>
+                    </div>
+                </div>
+                <div id="response" class="hidden">
+                    <p id="response-text"></p>
+                    <img id="response-image" src="" alt="Respuesta" class="response-image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
