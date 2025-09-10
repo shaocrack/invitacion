@@ -1,4 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Play background music when the page loads
+    const backgroundMusic = document.getElementById('background-music');
+    
+    // Function to handle first user interaction
+    function handleFirstInteraction() {
+        if (backgroundMusic.paused) {
+            backgroundMusic.play().catch(e => console.log('Error al reproducir la música:', e));
+        }
+        document.removeEventListener('click', handleFirstInteraction);
+        document.removeEventListener('keydown', handleFirstInteraction);
+    }
+    
+    // Add event listeners for first user interaction (required by autoplay policies)
+    document.addEventListener('click', handleFirstInteraction, { once: true });
+    document.addEventListener('keydown', handleFirstInteraction, { once: true });
+    
+    // Set volume to 50% by default
+    backgroundMusic.volume = 0.5;
     // Get DOM elements
     const welcomeScreen = document.getElementById('welcome-screen');
     const gameScreen = document.getElementById('game-screen');
@@ -151,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle yes button click
     yesBtn.addEventListener('click', () => {
         question.classList.add('hidden');
-        responseText.textContent = '¡Sabía que dirías que sí! ¡Soy tu mejor elección! 😊';
+        responseText.textContent = '¡Sabía que dirías que sí! ¡Soy tu mejor elección! ';
         // Show first photo and conditions
         if (photos.length > 0) {
             responseImage.src = photos[0];
@@ -187,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     signature.className = 'signature';
                     signature.innerHTML = `
                         <p>Con cariño,</p>
-                        <p>Shaopro ❤️</p>
+                        <p>Shaopro El mejor programador del Ecuador :D </p>
                     `;
                     response.appendChild(signature);
                     
@@ -244,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle no button click
     noBtn.addEventListener('click', () => {
         question.classList.add('hidden');
-        responseText.innerHTML = '¿Estás segura? 😏<br>Pero no me importa que digas que no, igual es un sí.';
+        responseText.innerHTML = '¿Estás segura? <br>Pero no me importa que digas que no, igual es un sí.';
         
         // Show first photo
         if (photos.length > 0) {
