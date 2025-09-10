@@ -134,13 +134,139 @@ button:hover {
     box-shadow: 0 6px 20px rgba(244, 67, 54, 0.4);
 }
 
+.photo-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
 .response-image {
     max-width: 100%;
-    border-radius: 10px;
+    border-radius: 15px;
+    margin: 10px 0;
+    max-height: 400px;
+    object-fit: contain;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.response-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+#happy-buttons {
     margin-top: 20px;
-    max-height: 300px;
-    object-fit: cover;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease;
+}
+
+#happy-buttons p {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #4a4a4a;
+}
+
+/* Conditions styles */
+#conditions {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+    animation: fadeIn 0.8s ease;
+}
+
+.conditions-list {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.conditions-list li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Name input styles */
+#name-input {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    animation: fadeIn 0.8s ease;
+}
+
+#user-name {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#user-name:focus {
+    border-color: #ff6b6b;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2);
+}
+
+/* Final message styles */
+#final-message {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    animation: fadeIn 0.8s ease;
+}
+
+#final-message h3 {
+    color: #ff6b6b;
+    margin-bottom: 20px;
+}
+
+#final-message p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.signature {
+    margin-top: 30px;
+    font-style: italic;
+    color: #666;
+}
+
+.signature p {
+    margin: 5px 0;
+}
+
+#restart-btn {
+    margin-top: 20px;
+    background: #4caf50;
+}
+
+#restart-btn:hover {
+    background: #43a047;
+}
+
+/* Make the must-accept button fun */
+#must-accept {
+    transition: all 0.3s ease;
+    background: #ff9800;
+}
+
+#must-accept:hover {
+    background: #f57c00;
+    transform: scale(1.05);
+}
+
+#yes-happy {
+    background: #4caf50;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+#no-happy {
+    background: #f44336;
+    box-shadow: 0 4px 15px rgba(244, 67, 54, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 @keyframes fadeIn {
